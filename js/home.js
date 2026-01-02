@@ -6,7 +6,7 @@ const recentGrid = document.querySelector(".recent-grid");
 let allBlogs = [];
 
 // Fetch blogs.json
-fetch("../data/blogs.json")
+fetch("./data/blogs.json")
   .then(res => res.json())
   .then(data => {
     // Sort latest first

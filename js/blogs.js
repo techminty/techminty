@@ -44,14 +44,14 @@ function renderBlogs() {
     card.className = "blog-card";
 
     card.innerHTML = `
-      <img src="${blog.coverImage}" alt="${blog.title}">
+      <img src="${blog.coverImage}" loading="eager" alt="${blog.title}">
       <div class="blog-content">
         <span class="meta">
           ${blog.date} · ${blog.readTime} · ${blog.category}
         </span>
         <h3>${blog.title}</h3>
         <p>${blog.description}</p>
-        <a href="${blog.slug}">Read more →</a>
+        <a href="${blog.slug}">Read more</a>
       </div>
     `;
 
