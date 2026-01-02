@@ -40,7 +40,7 @@ buttons.forEach(btn => {
     const card = e.target.closest(".support-card");
     selectedAmount = card.dataset.amount;
 
-    qrImage.src = `https://webdev7194.github.io/techminty/images/qr-${selectedAmount}.png`;
+    qrImage.src = `https://techminty.github.io/techminty/images/qr-${selectedAmount}.png`;
     document.getElementById("supportAmount").value = selectedAmount;
 
     checkoutBox.style.display = "block";
