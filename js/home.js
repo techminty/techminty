@@ -6,7 +6,7 @@ const recentGrid = document.querySelector(".recent-grid");
 let allBlogs = [];
 
 // Fetch blogs.json
-fetch("../data/blogs.json")
+fetch("data/blogs.json")
   .then(res => res.json())
   .then(data => {
     // Sort latest first
@@ -39,7 +39,7 @@ function renderFeaturedBlogs() {
     card.className = "blog-card";
 
     card.innerHTML = `
-      <img src="${blog.coverImage}" alt="${blog.title}">
+      <img src="${blog.coverImage}" loading="eager" alt="${blog.title}">
       <div class="blog-content">
         <span class="meta">
           ${blog.date} · ${blog.readTime} · ${blog.category}
@@ -68,7 +68,7 @@ function renderRecentBlogs() {
     card.className = "blog-card";
 
     card.innerHTML = `
-      <img src="${blog.coverImage}" alt="${blog.title}">
+      <img src="${blog.coverImage}" loading="eager" alt="${blog.title}">
       <div class="blog-content">
         <span class="meta">
           ${blog.date} · ${blog.readTime} · ${blog.category}
